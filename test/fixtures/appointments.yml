@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stages: MyString
+  address: MyString
+  appointment_time: 2015-07-29 16:09:22
+  due_time: 2015-07-29 16:09:22
+  service: MyString
+
+two:
+  stages: MyString
+  address: MyString
+  appointment_time: 2015-07-29 16:09:22
+  due_time: 2015-07-29 16:09:22
+  service: MyString
