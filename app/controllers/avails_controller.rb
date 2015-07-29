@@ -1,2 +1,0 @@
-class AvailsController < ApplicationController
-end
