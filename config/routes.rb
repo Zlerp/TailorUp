@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'tailors#index'
 
-  devise_for :tailor
+  devise_for :tailors
   resources :tailors
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
