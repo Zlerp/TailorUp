@@ -1,0 +1,12 @@
+
+<% if tailor_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_tailor_session_path, :method => :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_tailor_session_path)  %>
+  <%= link_to('signup', 'tailor/sign_up')  %>
+  </li>
+<% end %>
+<h2>Logged In</h2>
