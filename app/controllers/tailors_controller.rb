@@ -14,9 +14,14 @@ class TailorsController < ApplicationController
 
 
   def create
+    @tailor = Tailor.new(params)
   end
 
   def update
+  end
+
+  def params
+    params.require(:tailor).permit(:first_name, :last_name, :phone, :company_id)
   end
 
 end
