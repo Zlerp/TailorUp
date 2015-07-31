@@ -1,1 +1,13 @@
-<%= link_to 'New Tailor', "tailors/new" %>
+
+
+<% if company_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_company_session_path, :method => :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_company_session_path)  %>
+  <%= link_to('signup', 'companies/sign_up') %>
+  </li>
+<% end %>
+<h2>Logged In</h2>

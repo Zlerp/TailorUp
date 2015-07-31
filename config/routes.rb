@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :companies
+  resources :companies
   root 'users#index'
   devise_for :tailors
   resources :tailors
