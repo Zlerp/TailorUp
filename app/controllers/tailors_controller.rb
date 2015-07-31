@@ -9,9 +9,10 @@ class TailorsController < ApplicationController
     @tailor = Tailor.new
   end
 
-  def show
-  end
 
+  def show
+    @appointment = Appointment.new
+  end
 
   def create
     @tailor = Tailor.new(params)
