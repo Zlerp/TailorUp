@@ -28,11 +28,10 @@ class TailorsController < ApplicationController
   end
 
   def update
+
   end
 
-
-  private
-
+  protected
   def configure_permitted_parameters
    ## To permit attributes while registration i.e. sign up (app/views/devise/registrations/new.html.erb)
    devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :phone << :location << :company_id
@@ -41,6 +40,11 @@ class TailorsController < ApplicationController
     devise_parameter_sanitizer.for(:account_update) << :first_name << :last_name << :phone << :location
 
  end
+
+
+  private
+
+
 
   def set_tailor
     @tailor = Tailor.find(params[:id])
