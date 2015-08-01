@@ -1,0 +1,11 @@
+
+<%= simple_form_for([@company, @tailor]) do |f| %>
+  <%= f.input :email %>
+  <%= f.input :first_name%>
+  <%= f.input :last_name %>
+  <%= f.input :phone %>
+  <%= f.input :location %>
+  <%= f.input :password, autocomplete: "off" %>
+  <%= f.input :password_confirmation, autocomplete: "off" %>
+  <%= f.button :submit %>
+<% end %>

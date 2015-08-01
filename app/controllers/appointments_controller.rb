@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
 
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  before_action :set_tailor, only: [:update]
+  before_action :set_tailor, only: [:create]
 
     def index
       @appointments = Appointments.all
