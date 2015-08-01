@@ -1,0 +1,8 @@
+<%= simple_form_for([@user, @appointment]) do |a| %>
+  <%= a.input :stages %>
+  <%= a.input :address %>
+  <%= a.input :appointment_time %>
+  <%= a.input :due_time %>
+  <%= a.input :service %>
+  <%= a.button :submit %>
+<%end%>

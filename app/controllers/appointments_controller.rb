@@ -22,15 +22,16 @@ class AppointmentsController < ApplicationController
 
     private
 
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
-
     def set_tailor
       @tailor = Tailor.find(params[:tailor_id])
     end
 
+
+    def set_appointment
+      @appointment = Appointment.find(params[:id])
+    end
+
     def appointment_params
-      params.require(:appointment).permit(:tailor_id, :stages, :adress, :appointment_time, :due_time, :service )
+      params.require(:appointment).permit(:user_id, :tailor_id, :stages, :adress, :appointment_time, :due_time, :service )
     end
 end
