@@ -1,1 +1,14 @@
 THis is show page!@!@!@!@
+
+
+<h2>Current Tailors:</h2>
+
+<%# @company.tailors.each do |tailor| %>
+  <ul>
+    <li><%# link_to tailor.name, tailor %></li>
+  </ul>
+  <%# end %>
+
+
+<h2>Add a Tailor</h2>
+<%= render :partial => "tailors/form" %>

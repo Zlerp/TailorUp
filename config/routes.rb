@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
 
   devise_for :companies
-  resources :companies
+  resources :companies do
+    resources :tailors
+  end
   root 'users#index'
   devise_for :tailors
-  resources :tailors
+  resources :tailors do
+    resources :appointments
+  end
+
+  resources :appointments
   devise_for :users
   resources :users
+  resources :articles
+
 
 
 
