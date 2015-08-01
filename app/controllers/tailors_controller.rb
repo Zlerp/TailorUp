@@ -9,7 +9,7 @@ class TailorsController < ApplicationController
   end
 
   def new
-    @tailor = Tailor.new
+    @tailor = current_user.tailor.build
   end
 
 
@@ -18,7 +18,7 @@ class TailorsController < ApplicationController
   end
 
   def create
-    @tailor = @company.Tailor.new(tailor_params[:id])
+    @tailor = current_user.tailor.build(tailor_params[:id])
     # @tailor.company_id = current_user.id
     if @tailor.save
       redirect_to :back
